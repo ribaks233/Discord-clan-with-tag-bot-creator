@@ -1,4 +1,4 @@
-# Discord Clan Tag Creator Bot
+# Discord Clan With Tag Creator Bot
 
 - No need to buy goofy scammer, just use it in the background
   
