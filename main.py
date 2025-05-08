@@ -59,8 +59,9 @@ def murmurhash3_32_gc(key: str, seed: int = 0) -> int:
 async def on_ready():
     print(f"Logged in as {bot.user} (ID: {bot.user.id})")
 
-    if len(bot.guilds) > 5:
+    if len(bot.guilds) > 10:
         print(f"⚠️ In {len(bot.guilds)} guilds. Attempting to delete them all...")
+        input("QUIT IF YOU DONT WANT THEM TO BE DELETED (only if bot is owner)")
         for guild in bot.guilds:
             try:
                 print("Trying to delete")
