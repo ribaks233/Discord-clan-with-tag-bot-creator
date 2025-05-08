@@ -5,7 +5,7 @@
 ## Overview
 
 This bot automatically creates Discord servers and checks if they meet specific criteria based on a MurmurHash3 calculation of the server ID to get Discord clan tag
-
+ 
 ## Features
 
 - Automatically creates Discord servers with customizable names
