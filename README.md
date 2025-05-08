@@ -1,7 +1,7 @@
 # Discord Clan Tag Creator Bot
 
 - No need to buy goofy scammer, just use it in the background
-- 
+  
 ## Overview
 
 This bot automatically creates Discord servers and checks if they meet specific criteria based on a MurmurHash3 calculation of the server ID to get Discord clan tag
