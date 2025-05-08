@@ -6,7 +6,7 @@ import os
 from discord.ext import commands
 
 TOKEN = "BOT TOKEN" # put your own token
-INTERVAL = 120 # DONT CHANGE FOR RATELIMIT
+INTERVAL = 60 # DONT CHANGE FOR RATELIMIT
 DELETE_DELAY = 2 # You can change
 SERVER_NAME = "Tag server" # You can change
 
