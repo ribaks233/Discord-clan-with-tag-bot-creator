@@ -2,7 +2,7 @@
 
 - No need to buy goofy scammer, just use it in the background
 
-# still work
+# Patched, will alert when enabled back
 
 ## Overview
 
