@@ -14,9 +14,9 @@ This bot automatically creates Discord servers and checks if they meet specific 
 
 # How to transfer
 - 2 ways :
-  - Use discordBotClient [Click here](https://github.com/aiko-chan-ai/DiscordBotClient)
+  - discordBotClient [discordBotClient](https://github.com/aiko-chan-ai/DiscordBotClient) (May lead to a bot ban)
 Or
-  - Use transfer.py to be able to transfer it
+  - Use `transfer.py` to be able to transfer it (Coming soon)
 
 ## Requirements
 
