@@ -12,6 +12,12 @@ This bot automatically creates Discord servers and checks if they meet specific 
 - Find server that has tag availability
 - Automatically deletes servers that don't meet the criteria
 
+# How to transfer
+- 2 ways :
+  - Use discordBotClient [Click here](https://github.com/aiko-chan-ai/DiscordBotClient)
+Or
+  - Use transfer.py to be able to transfer it
+
 ## Requirements
 
 - Python 3.9+
