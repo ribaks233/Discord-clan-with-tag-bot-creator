@@ -78,27 +78,32 @@ async def on_ready():
             print("✅ All guilds deleted.")
 
     asyncio.create_task(start_farming())
+
 async def start_farming():
     while True:
         try:
-            new_guild = await bot.create_guild(name=SERVER_NAME)
-        except discord.HTTPException:
-            await asyncio.sleep(INTERVAL)
-            continue
-
-        hash_val = murmurhash3_32_gc(f"2025-02_skill_trees:{new_guild.id}") % 10000
-
-        if (10 <= hash_val < 20) or (60 <= hash_val < 100):
-            print(f"🟢 GOOD: Guild ID {new_guild.id} | hash : {hash_val}")
-            break
-        else:
-            print(f"🔴 BAD: Guild ID {new_guild.id} | hash : {hash_val}")
-            await asyncio.sleep(DELETE_DELAY)
             try:
-                await new_guild.delete()
-            except:
-                pass
+                new_guild = await bot.create_guild(name=SERVER_NAME)
+            except Exception as e:
+                print(f"⚠️ Failed to create guild: {e}")
+                await asyncio.sleep(INTERVAL)
+                continue
 
-        await asyncio.sleep(INTERVAL)
+            hash_val = murmurhash3_32_gc(f"2025-02_skill_trees:{new_guild.id}") % 10000
 
+            if (10 <= hash_val < 20) or (60 <= hash_val < 100):
+                print(f"🟢 GOOD: Guild ID {new_guild.id} | hash : {hash_val}")
+                break
+            else:
+                print(f"🔴 BAD: Guild ID {new_guild.id} | hash : {hash_val}")
+                try:
+                    await new_guild.delete()
+                    print(f"🗑️ Deleted guild: {new_guild.name} ({new_guild.id})")
+                except Exception as e:
+                    print(f"❌ Failed to delete guild: {e}")
+                await asyncio.sleep(DELETE_DELAY)
+
+        except Exception as outer_error:
+            print(f"❌ Unexpected error in farming loop: {outer_error}")
+            await asyncio.sleep(INTERVAL)
 bot.run(TOKEN)
