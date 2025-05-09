@@ -13,6 +13,7 @@ This bot automatically creates Discord servers and checks if they meet specific 
 - Automatically deletes servers that don't meet the criteria
 
 # How to transfer
+
 - 2 ways :
   - discordBotClient [discordBotClient](https://github.com/aiko-chan-ai/DiscordBotClient) (May lead to a bot ban)
 Or
